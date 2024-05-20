@@ -1,0 +1,40 @@
+package material.polimorfismo;
+
+/**
+ * Classe utilizada para representar uma Pessoa.
+ */
+public class Pessoa {
+  private String nome;
+
+  public String getNome() {
+    return nome;
+  }
+
+  public void setNome(final String nome) {
+    this.nome = nome;
+  }
+}
+package material.polimorfismo;
+
+/**
+ * Classe utilizada para representar uma Pessoa Física
+ * que É UMA subclasse de Pessoa.
+ */
+public class PessoaFisica extends Pessoa {
+  private long cpf;
+
+  public PessoaFisica() {
+  }
+
+  public long getCpf() {
+    return cpf;
+  }
+
+  public void setCpf(long cpf) {
+    this.cpf = cpf;
+  }
+
+  public String getNome() {
+    return "Pessoa Fisica: " + super.getNome() + " - CPF: " + this.getCpf();
+  }
+}
